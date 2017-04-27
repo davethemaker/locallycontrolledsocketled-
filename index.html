@@ -21,7 +21,7 @@
 	    <div class="row">
 	        <div class="col-xs-4"></div>
 	        <div class="col-xs-4">
-				messages:<ul id="messages"></ul>        	
+				Slider Values:<ul id="messages"></ul>        	
 	        </div>
 	        <div class="col-xs-4"></div>
 	    </div>	
@@ -36,9 +36,9 @@
 			console.log('connected');
 		});
 		socket.on('changeColor',function(data){
-			alert("color change to val: " + data);
+			$("#messages").append("<li>"+data+"</li>");
 		});
-		
+
 		$('#submitButton').on('click',function(){
 			socket.emit('ledValue', $('#ledRange').val());
 			return false;
