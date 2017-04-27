@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
 </head>
 
 <body>
@@ -32,12 +32,15 @@
 	<script>
 	$(function(){
 		var socket = io.connect(window.location.hostname + ':' + 8000);
+		var slider = document.getElementById('ledRange');
+		
 		socket.on('connect',function(data){
 			console.log('connected');
 		});
 		socket.on('changeColor',function(data){
 			$("#messages").append("<li>"+data+"</li>");
 		});
+
 
 		$('#submitButton').on('click',function(){
 			socket.emit('ledValue', $('#ledRange').val());
