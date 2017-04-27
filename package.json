@@ -1,0 +1,30 @@
+{
+  "name": "locallycontrolledsocketled",
+  "version": "1.0.0",
+  "description": "arduino-controlled led using node and johnny-five",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davethemaker/locallycontrolledsocketled.git"
+  },
+  "keywords": [
+    "node",
+    "johnny-five",
+    "arduino",
+    "led"
+  ],
+  "author": "David Eliason",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davethemaker/locallycontrolledsocketled/issues"
+  },
+  "homepage": "https://github.com/davethemaker/locallycontrolledsocketled#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "johnny-five": "^0.10.10",
+    "socket.io": "^1.7.3"
+  }
+}
