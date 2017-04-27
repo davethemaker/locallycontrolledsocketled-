@@ -14,7 +14,8 @@ app.get('/',function(req,res){
 
 io.on('connection',function(socket){
    socket.on('ledValue',function(data){
-   	console.log("new data" + data);
+   	console.log("new data :" + data);
+   	socket.emit('changeColor',data);
    });
 });
 

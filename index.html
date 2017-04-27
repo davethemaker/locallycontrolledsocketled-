@@ -31,7 +31,14 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
 	$(function(){
-		var socket = io();
+		var socket = socket = io.connect(window.location.hostname + ':' + 8000);
+		socket.on('connect',function(data){
+			console.log('connected');
+		});
+		socket.on('changeColor',function(data){
+			alert("color change to val: " + data);
+		});
+		
 		$('#submitButton').on('click',function(){
 			socket.emit('ledValue', $('#ledRange').val());
 			return false;
