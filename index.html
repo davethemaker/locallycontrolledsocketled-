@@ -35,7 +35,7 @@
 		var slider = document.getElementById('ledRange');
 		
 		socket.on('connect',function(data){
-			console.log('connected');
+			console.log('socket.io is connected');
 		});
 		socket.on('changeColor',function(data){
 			$("#messages").append("<li>"+data+"</li>");
