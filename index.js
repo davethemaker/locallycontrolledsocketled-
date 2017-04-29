@@ -15,8 +15,11 @@ app.get('/',function(req,res){
 io.on('connection',function(socket){
 	console.log('a user connected');
 
+	// mongodb://admin:open@ds123351.mlab.com:23351/localsocketled
+
     socket.on('ledValue',function(data){
      	console.log("new data :" + data);
+     	// db.ledValue.insert({"value" : data});
      	io.emit('changeColor',data);
    });
 });
