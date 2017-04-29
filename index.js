@@ -3,6 +3,7 @@ const app 		= express();
 
 const http 		= require('http').Server(app);
 const io 		= require('socket.io')(http);
+const five  	= require('johnny-five');
 
 app.set('port', (process.env.PORT || 8000));
 
@@ -12,7 +13,12 @@ app.get('/',function(req,res){
 	res.sendFile(__dirname + '/index.html');
 });
 
-io.on('connection',function(socket){
+// need to establish johnny-five connection first, envelope socket
+five.Board().on('ready',function(){
+	console.log('arduino ready');
+
+
+	io.on('connection',function(socket){
 	console.log('a user connected');
 
 	// mongodb://admin:open@ds123351.mlab.com:23351/localsocketled
@@ -22,7 +28,9 @@ io.on('connection',function(socket){
      	// db.ledValue.insert({"value" : data});
      	io.emit('changeColor',data);
    });
+  });
 });
+
 
 
 http.listen(app.get('port'), function() {
