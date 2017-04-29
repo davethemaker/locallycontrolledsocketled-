@@ -14,8 +14,8 @@ app.get('/',function(req,res){
 });
 
 // need to establish johnny-five connection first, envelope socket
-five.Board().on('ready',function(){
-	console.log('arduino ready');
+// five.Board().on('ready',function(){
+	// console.log('arduino ready');
 
 
 	io.on('connection',function(socket){
@@ -29,7 +29,7 @@ five.Board().on('ready',function(){
      	io.emit('changeColor',data);
    });
   });
-});
+// });
 
 
 
