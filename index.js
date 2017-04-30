@@ -13,11 +13,6 @@ app.get('/',function(req,res){
 	res.sendFile(__dirname + '/index.html');
 });
 
-// need to establish johnny-five connection first, envelope socket
-// five.Board().on('ready',function(){
-	// console.log('arduino ready');
-
-
 	io.on('connection',function(socket){
 	console.log('a user connected');
 
@@ -29,7 +24,6 @@ app.get('/',function(req,res){
      	io.emit('changeColor',data);
    });
   });
-// });
 
 
 
