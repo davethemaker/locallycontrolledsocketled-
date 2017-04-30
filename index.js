@@ -18,6 +18,12 @@ app.get('/clientScript.js',function(req,res){
 	res.sendFile(__dirname + '/clientScript.js');
 });
 
+app.get('/css/styles.css',function(req,res){
+	res.sendFile(__dirname + '/css/styles.css');
+});
+
+app.get('./')
+
 	io.on('connection',function(socket){
 	console.log('a user connected');
 
