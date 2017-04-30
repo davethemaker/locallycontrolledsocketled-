@@ -1,5 +1,6 @@
 const express 	= require('express');
 const app 		= express();
+const url  		= require('url');
 
 const http 		= require('http').Server(app);
 const io 		= require('socket.io')(http);
@@ -11,6 +12,10 @@ app.set('port', (process.env.PORT || 8000));
 app.get('/',function(req,res){
 	// res.writeHead(200,{'content-type': 'text/html'});
 	res.sendFile(__dirname + '/index.html');
+});
+
+app.get('/clientScript.js',function(req,res){
+	res.sendFile(__dirname + '/clientScript.js');
 });
 
 	io.on('connection',function(socket){
