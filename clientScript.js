@@ -9,7 +9,7 @@ $(function(){
 		});
 		socket.on('changeColor',function(data){
 			$("#messages").append("<li>"+data+"</li>");
-			console.log("here is data" + data);
+			console.log("here is new data chunk: " + data);
 		});
 
 

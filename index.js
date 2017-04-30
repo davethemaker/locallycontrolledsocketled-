@@ -2,7 +2,7 @@ const express 	= require('express');
 const app 		= express();
 const url  		= require('url');
 
-const http 		= require('http').Server(app);
+const http 		= require('http').createServer(app);
 const io 		= require('socket.io')(http);
 const five  	= require('johnny-five');
 
