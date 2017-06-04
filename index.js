@@ -5,6 +5,47 @@ const url  		= require('url');
 const http 		= require('http').createServer(app);
 const io 		= require('socket.io')(http);
 const five  	= require('johnny-five');
+const serialport 	= require('serialport');
+
+var SerialPort = serialport.SerialPort;
+var portName   = "/dev/ttyACM0";
+// var port = new SerialPort('/dev/cu.usbmodem1421', {autoOpen: false});
+
+
+// SerialPort.list(function (err, ports) {
+//   ports.forEach(function(port) {
+//     console.log(port.comName);
+//     console.log(port.pnpId);
+//     console.log(port.manufacturer);
+//   });
+// });
+
+var myPort = new SerialPort(portName, {
+   baudRate: 9600,
+   // look for return and newline at the end of each data packet:
+   parser: serialport.parsers.readline("\n")
+ });
+
+function showPortOpen() {
+   console.log('port open. Data rate: ' + myPort.options.baudRate);
+}
+
+function sendSerialData(data) {
+   console.log(data);
+}
+
+function showPortClose() {
+   console.log('port closed.');
+}
+
+function showError(error) {
+   console.log('Serial port error: ' + error);
+}
+
+myPort.on('open', showPortOpen);    //when the serial port is opened, the showPortOpen function will get called
+myPort.on('data', sendSerialData);  //when new data arrives, the sendSerialData function will get called
+myPort.on('close', showPortClose);
+myPort.on('error', showError);
 
 app.set('port', (process.env.PORT || 8000));
 

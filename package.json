@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "arduino-controlled led using node and johnny-five",
   "main": "index.js",
+  "engines":{
+    "node":"6.9.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +29,7 @@
   "dependencies": {
     "express": "^4.15.2",
     "johnny-five": "^0.10.10",
+    "serialport": "^4.0.7",
     "socket.io": "^1.7.3"
   }
 }
