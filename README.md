@@ -1,7 +1,7 @@
-#Socket LED
-##April 27, 2017
-###David Eliason
-####Controlling an arduino-controlled LED using node, johnny-five, Javascript, websockets, jQuery
+# Socket LED
+## April 27, 2017 (updated 6/4/seventeen)
+### [David Eliason](http://www.deliason.com)
+#### Controlling an arduino-controlled LED using node, johnny-five, Javascript, websockets, jQuery, express
 
 **Instructions**
 
