@@ -1,7 +1,7 @@
 // const five = 	require('johnny-five');
 
 $(function(){
-		var socket = io.connect('https://pacific-waters-83081.herokuapp.com/');
+		var socket = io.connect('https://locallycontrolledsocketled.herokuapp.com/');
 		var slider = document.getElementById('ledRange');
 		
 		socket.on('connect',function(data){
