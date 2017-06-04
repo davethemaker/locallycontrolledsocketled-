@@ -21,3 +21,5 @@ b. spin up arduino ide
 c. make sure board and port are configured properly
 d. upload 'firmata' library to arduino
 e. red = pin 9, green = 10, blue = 11
+
+![locallycontrolledsocketled](locallycontrolledsocketled.png)
