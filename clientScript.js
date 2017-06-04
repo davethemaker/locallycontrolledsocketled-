@@ -10,6 +10,8 @@ $(function(){
 		socket.on('changeColor',function(data){
 			$("#messages").append("<li>"+data+"</li>");
 			console.log("here is new data chunk: " + data);
+			led.color(data);
+			// insatiate johnnyFive here
 		});
 
 

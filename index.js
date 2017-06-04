@@ -5,6 +5,8 @@ const url  		= require('url');
 const http 		= require('http').createServer(app);
 const io 		= require('socket.io')(http);
 const five  	= require('johnny-five');
+const board   = new five.Board();
+const led = new five.Led.RGB([9, 10, 11]);
 const serialport 	= require('serialport');
 
 var SerialPort = serialport.SerialPort;
