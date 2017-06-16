@@ -1,5 +1,5 @@
 # [Socket LED](https://locallycontrolledsocketled.herokuapp.com/)
-## April 27, 2017 (updated 6/4/seventeen)
+## April 27, 2017 (updated 6/4/2017 and 6/16/17)
 ### [David Eliason](http://www.deliason.com)
 #### Controlling an arduino-controlled LED using node, johnny-five, Javascript, websockets, jQuery, express
 
