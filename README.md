@@ -5,8 +5,6 @@
 
 **Instructions**
 
-You can visit a [live version of the code here](https://locallycontrolledsocketled.herokuapp.com/)
-
 To have the joy of controlling a real-live rgb led, you can run this app locally:
 
 1. clone repo
