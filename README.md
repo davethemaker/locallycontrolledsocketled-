@@ -3,6 +3,8 @@
 ### [David Eliason](http://www.deliason.com)
 #### Controlling an arduino-controlled LED using node, johnny-five, Javascript, websockets, jQuery, express
 
+[Return to Portfolio](https://davideliason.github.io/)
+
 **Instructions**
 
 To have the joy of controlling a real-live rgb led, you can run this app locally:
@@ -21,3 +23,5 @@ d. upload 'firmata' library to arduino
 e. red = pin 9, green = 10, blue = 11
 
 ![locallycontrolledsocketled](locallycontrolledsocketled.png)
+
+[Return to Portfolio](https://davideliason.github.io/)
