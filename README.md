@@ -1,6 +1,6 @@
-# [Socket LED](https://locallycontrolledsocketled.herokuapp.com/)
+# [Socket LED](https://github.com/davideliason/locallycontrolledsocketled-)
 ## April 27, 2017 (updated 6/4/2017 and 6/16/17)
-### [David Eliason](http://www.deliason.com)
+### [David Eliason](http://www.davethemaker.com)
 #### Controlling an arduino-controlled LED using node, johnny-five, Javascript, websockets, jQuery, express
 
 [Return to Portfolio](https://davideliason.github.io/)
